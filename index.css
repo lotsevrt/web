@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+/* 1. Вимикаємо автоматичну темну тему Windows. Тепер усе слухає ТІЛЬКИ нашу кнопку */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark .bg-slate-100 {
+    background-color: #0f172a !important;
+}
+
+/* Головна біла картка та модальне вікно стають темними */
+.dark .bg-white {
+    background-color: #1e293b !important;
+    border-color: #334155 !important;
+}
+
+/* Світлі плашки (навички, відгуки, освіта) */
+.dark .bg-slate-50 {
+    background-color: #334155 !important;
+    border-color: #475569 !important;
+}
+
+/* Блакитні плашки (Мови) */
+.dark .bg-blue-100 {
+    background-color: #1e3a8a !important;
+}
+.dark .text-blue-800 {
+    color: #bfdbfe !important;
+}
+
+/* Всі звичайні тексти робимо світло-сірими, щоб читалося */
+.dark .text-slate-800, 
+.dark .text-slate-700, 
+.dark .text-slate-600, 
+.dark .text-slate-500 {
+    color: #cbd5e1 !important;
+}
+
+/* Всі заголовки та жирний текст робимо білосніжними */
+.dark h1, .dark h2, .dark h3, .dark strong {
+    color: #ffffff !important;
+}
+
+/* Поля вводу у формі (щоб не сліпили білим у темній темі) */
+.dark input, .dark textarea {
+    background-color: #0f172a !important;
+    color: #ffffff !important;
+    border-color: #475569 !important;
+}
